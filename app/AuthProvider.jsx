@@ -1,5 +1,5 @@
 "use client";
-import { api } from '@/convex/_generated/api';
+import { api } from '../convex/_generated/api';
 import { useUser } from '@stackframe/stack';
 import { useMutation, useQuery } from 'convex/react';
 import React, { useState, useEffect } from 'react';
@@ -61,4 +61,4 @@ if (!user || !user.primaryEmail) {
 }
 
 
-export default AuthProvider
+export default AuthProvider;

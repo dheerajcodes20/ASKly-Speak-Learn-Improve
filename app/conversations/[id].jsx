@@ -1,6 +1,6 @@
 import { useParams } from 'next/navigation';
 import { useQuery } from 'convex/react';
-import { api } from '@/convex/_generated/api';
+import { api } from '../../convex/_generated/api';
 import ChatBox from '../(main)/discussion-room/[roomid]/_components/ChatBox';
 import React from 'react';
 

@@ -5,16 +5,16 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { CoachingExpert, CoachingOptions } from '@/services/options'
-import { Textarea } from '@/components/ui/textarea'
+  DialogTrigger
+} from '../../../../components/ui/dialog';
+import { CoachingExpert, CoachingOptions } from '../../../../services/options';
+import { Textarea } from '../../../../components/ui/textarea'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import { Button } from '../../../../components/ui/button'
 import { DialogClose } from '@radix-ui/react-dialog'
 import { LoaderCircle } from 'lucide-react'
 import { useMutation } from 'convex/react'
-import { api } from '@/convex/_generated/api'
+import { api } from '../../../../convex/_generated/api'
 import { useRouter } from 'next/navigation'
 import { useUser } from '@stackframe/stack'
 

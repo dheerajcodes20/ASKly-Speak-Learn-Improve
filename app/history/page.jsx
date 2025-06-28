@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
+import { api } from "../../convex/_generated/api";
 import { useUser } from "@stackframe/stack";
 import Link from "next/link";
 

@@ -1,16 +1,16 @@
 "use client";
-import { Button } from '@/components/ui/button';
-import { api } from '@/convex/_generated/api';
-import { CoachingExpert, CoachingOptions } from '@/services/options';
+import { Button } from '../../../../components/ui/button';
+import { api } from '../../../../convex/_generated/api';
+import { CoachingExpert, CoachingOptions } from '../../../../services/options';
+import { AIModel, CovertTextToSpeech } from '../../../../services/GlobalServices';
+import ChatBox from './_components/ChatBox';
+import Webcam from "react-webcam";
 import { UserButton } from '@stackframe/stack';
 import { useMutation, useQuery } from 'convex/react';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import React, { useRef, useState, useEffect } from 'react';
 import RecordRTC from 'recordrtc';
-import { AIModel, CovertTextToSpeech } from '@/services/GlobalServices';
-import ChatBox from './_components/ChatBox';
-import Webcam from "react-webcam";
 
 // Utility to safely join message parts and clean duplicates
 function cleanAndJoin(...parts) {
