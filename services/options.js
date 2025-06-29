@@ -36,6 +36,8 @@ export const CoachingOptions = [
     }
 ];
 
+
+
 export const CoachingExpert = [
     {
         name: 'Joanna',
@@ -60,4 +62,4 @@ export const CoachingExpert = [
     //     avatar: '/t4.png',
     //     pro: true
     // },
-];
+]

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CoachingOptions, CoachingExpert } from './options.js';
+import { CoachingOptions, CoachingExpert } from './options';
 
 
 

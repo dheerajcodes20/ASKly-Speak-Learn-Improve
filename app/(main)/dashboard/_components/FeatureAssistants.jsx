@@ -1,11 +1,11 @@
 "use client";
 import { BlurFade } from '../../../../components/magicui/blur-fade';
 import { Button } from '../../../../components/ui/button';
-import { CoachingOptions } from '../../../../services/options';
 import { useUser } from '@stackframe/stack';
 import Image from 'next/image';
 import React from 'react';
 import UserInputDialog from './UserInputDialog';
+import { CoachingOptions } from '../../../../services/options';
 
 function FeatureAssistants() {
     const user = useUser();

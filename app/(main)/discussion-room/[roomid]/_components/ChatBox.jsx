@@ -67,7 +67,7 @@ function AnimatedMessage({ content, align, avatar, bubbleColor, textColor, isLas
     );
 }
 
-function ChatBox({ conversation = [], loadingAI = false, aiName = 'Joey', userName = 'You', aiAvatar = '/ai-avatar.png' }) {
+function ChatBox({ conversation = [], loadingAI = false, aiName = 'Joey', userName = 'You', aiAvatar = '/ai-avatar.png', conversationEnded = false }) {
     const messagesEndRef = useRef(null);
 
     // Scroll to bottom when new messages arrive
@@ -129,7 +129,7 @@ function ChatBox({ conversation = [], loadingAI = false, aiName = 'Joey', userNa
                     })
                 )}
                 <div ref={messagesEndRef} />
-                {loadingAI && (
+                {loadingAI && !conversationEnded && (
                     <div className="flex items-start gap-2">
                         <div className="flex-shrink-0">
                             <img

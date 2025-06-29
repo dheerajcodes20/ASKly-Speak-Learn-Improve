@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
-import { CoachingOptions } from "../../services/options"; // <-- changed from .jsx to .js
+import { CoachingOptions } from "../../../services/options";
+// import { CoachingOptions } from "/services/options.js"; // <-- changed from .jsx to .js
 
 export async function POST(req) {
   try {    const { topic, coachingOption, msg } = await req.json();

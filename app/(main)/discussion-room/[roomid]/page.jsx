@@ -467,6 +467,7 @@ function DiscussionRoom() {
                 userAvatar={'/mypic.jpeg'}
                 aiAvatar={Expert?.avatar || '/ai-avatar.png'}
                 topic={DiscussionRoomData?.topic}
+                conversationEnded={!enableMic && !isRecording && !loadingAI && !pendingUserMsg}
               />
             </div>
             <div className='w-full lg:w-[61vw] mt-4 lg:mt-0'>
