@@ -40,8 +40,8 @@ useEffect(() => {
     create();
 }, [user, existingUser, CreateUser]);
 
-// Allow handler routes to render even if user is not loaded
-if (pathname && pathname.startsWith('/handler')) {
+// Allow handler routes and root page to render even if user is not loaded
+if ((pathname && pathname.startsWith('/handler')) || pathname === "/") {
   return <>{children}</>;
 }
 

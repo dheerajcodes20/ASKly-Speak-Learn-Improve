@@ -9,10 +9,10 @@ export default function Home() {
 
    
    <div className="flex flex-col items-center justify-center h-screen bg-gray-50 text-2xl">
-    <div>
-       <UserButton  />
+    <div className="">
+      <span className=" flex flex-col items-center"><UserButton/></span>
         click here to 
-       <Link  href="http://talktutor1.vercel.app/dashboard/" className="text-blue-600 font-bold"> continue</Link>
+       <Link  href="https://talktutor1.vercel.app/dashboard" className="text-blue-600 font-bold"> continue</Link>
     </div>
    </div>
 
