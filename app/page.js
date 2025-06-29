@@ -12,7 +12,7 @@ export default function Home() {
     <div className="">
       <span className=" flex flex-col items-center"><UserButton/></span>
         click here to 
-       <Link  href="https://talktutor1.vercel.app/dashboard" className="text-blue-600 font-bold"> continue</Link>
+       <Link  href="https://askly-speak-learn-improve.vercel.app/dashboard" className="text-blue-600 font-bold"> continue</Link>
     </div>
    </div>
 

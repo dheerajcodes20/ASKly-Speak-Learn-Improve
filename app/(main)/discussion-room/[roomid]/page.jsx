@@ -458,7 +458,7 @@ function DiscussionRoom() {
                 </div>
             </div>
             {/* ChatBox Section (1 column) */}
-            <div className='h-[40vh] sm:h-[60vh] bg-gray-50 rounded-lg shadow-lg flex flex-col w-full'>             
+            <div className='h-[40vh] sm:h-[60vh] bg-gray-50 rounded-lg shadow-lg flex flex-col w-full'>              
                <ChatBox 
                 conversation={conversation} 
                 loadingAI={loadingAI} 
@@ -469,8 +469,23 @@ function DiscussionRoom() {
                 topic={DiscussionRoomData?.topic}
                 conversationEnded={!enableMic && !isRecording && !loadingAI && !pendingUserMsg}
               />
+              {/* Feedback section for mobile: show below chatbox */}
+              <div className="block lg:hidden w-full mt-4">
+                <div className='flex justify-end items-center'>
+                  <Button className="bg-gray-700 w-full sm:w-auto" onClick={handleFeedback} disabled={feedbackLoading}>
+                    {feedbackLoading ? 'Generating...' : 'Feedback Generation'}
+                  </Button>
+                </div>
+                {showFeedback && feedback && (
+                  <div className="mt-4 p-4 bg-gray-100 rounded-lg shadow text-gray-800">
+                    <div>{feedback}</div>
+                    <Button className="mt-2 w-full sm:w-auto" variant="outline" onClick={() => setShowFeedback(false)}>Close</Button>
+                  </div>
+                )}
+              </div>
             </div>
-            <div className='w-full lg:w-[61vw] mt-4 lg:mt-0'>
+            {/* Feedback section for desktop: show to the side */}
+            <div className='hidden lg:block w-full lg:w-[61vw] mt-4 lg:mt-0'>
               <div className='flex justify-end items-center'>
                 <Button className="bg-gray-700 w-full sm:w-auto" onClick={handleFeedback} disabled={feedbackLoading}>
                   {feedbackLoading ? 'Generating...' : 'Feedback Generation'}
