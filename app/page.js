@@ -12,7 +12,7 @@ export default function Home() {
     <div>
        <UserButton  />
         click here to 
-       <Link  href="http://localhost:3000/dashboard" className="text-blue-600 font-bold"> continue</Link>
+       <Link  href="http://talktutor1.vercel.app/dashboard/" className="text-blue-600 font-bold"> continue</Link>
     </div>
    </div>
 
