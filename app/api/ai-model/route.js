@@ -25,7 +25,7 @@ export async function POST(req) {
     });
 
     const completion = await openai.chat.completions.create({
-      model: "deepseek/deepseek-chat-v3-0324:free",
+      model: "openai/gpt-3.5-turbo",
       messages: [
         { role: "assistant", content: PROMPT },
         { role: "user", content: cleanedMsg }
